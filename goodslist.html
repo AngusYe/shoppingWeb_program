@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表页</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/h&f-style.css" />
+		<link rel="stylesheet" type="text/css" href="css/goods-style.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/listgoodselect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/h&f-indexJs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/shopcar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/unfoldbtn.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.fly.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			
+			$(function(){
+				
+				//创建品牌btn对象
+
+                 var unfold = new Unfoldbtn()
+                 
+                 //创建购物车对象
+				var shopcar =new Shopcar()
+				 
+				 var list = new Listselect()
+				
+				
+				 /*点击列表页加入购物车*/
+				 shopcar.clickgoodlist()
+
+ 
+			})
+		</script>
+		<!--头部开始-->
+		<!--顶端-->
+		<div id="head-warp">
+			<div class="warp">
+				<div class="warp-left">
+					订购热线：400-608-8888
+				</div>
+				<!--顶端右部分导航-->
+				<ul class="warp-nav">
+					<li>欢迎来到好享购物</li>
+					<li class="vatical-line">｜</li>
+					<li class="login">
+						<a href="http://127.0.0.1/shopping_program/loginindex.html">登录</a>
+					</li>
+					<li class="vatical-line hide">｜</li>
+					<li class="regist">
+						<a href="http://127.0.0.1/shopping_program/registerindex.html">注册</a>
+					</li>
+					<li class="vatical-line">｜</li>
+					<li>
+						<a href="#">我的订单</a>
+					</li>
+					<li class="vatical-line">｜</li>
+					<li class="warp-nav-subox">
+						<a href="#">我的hao24</a>
+						<ul class="hide-list">
+							<li>
+								<a href="#">我的购物金</a>
+							</li>
+							<li>
+								<a href="#">我的优惠券</a>
+							</li>
+							<li>
+								<a href="#">我的积分卡</a>
+							</li>
+							<li>
+								<a href="#">我的暂存款</a>
+							</li>
+						</ul>
+					</li>
+					<li class="vatical-line">｜</li>
+					<li class="warp-nav-subox">
+						<i class="warp-nav-phone"></i>
+						<a href="#">手机购物</a>
+						<ul class="hide-list">
+							<li class="app-code"><img src="img/app_code.jpg" /></li>
+							<li style="margin: 0 13px;box-sizing: border-box;">扫一扫，下载客户端</li>
+						</ul>
+					</li>
+					<li class="vatical-line">｜</li>
+					<li>
+						<a href="#">客服中心</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--顶端广告图部分-->
+		<div id="head-ad">
+			<div class="ad-main">
+				<a href="#">
+					<img src="img/adimg.jpg" />
+				</a>
+				<!--顶端广告图关闭按钮-->
+				<a href="#" class="close">
+					<img src="img/tai_close.png" />
+				</a>
+			</div>
+		</div>
+		<!--LOGO模块-->
+		<div id="logo-module">
+			<div class="logo">
+				<h1>
+					<a href="#" title="欢迎来到好享购物">
+                                                            好享购物
+					</a>
+				</h1>
+			</div>
+			<!--AD-LOGO模块-->
+			<div class="ad-logo">
+				<img src="img/ad-logo.jpg" />
+			</div>
+			<!--搜索模块-->
+			<div class="search">
+				<input type="text" placeholder="请输入关键字" class="search-text" />
+				<input type="button" class="btn-search" value="搜索" />
+
+				<!--搜索模块下的热词-->
+				<div class="search-hotword">
+					<ul>
+						<li>
+							<a href="#">美国西屋</a>
+						</li>
+						<li>
+							<a href="#">小熊电热饭盒</a>
+						</li>
+						<li>
+							<a href="#">吉优百换鞋收纳凳</a>
+						</li>
+						<li>
+							<a href="#">收纳用品</a>
+						</li>
+						<li>
+							<a href="#">莱克内衣</a>
+						</li>
+						<li>
+							<a href="#">乳胶床垫</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--购物车模块-->
+			<div class="car">
+				<div class="shop-car">
+					<i class="shop-car-left"></i>
+					<a href="shoppingcar.html">我的购物车</a>
+					<i class="xsnum">1</i>
+					<i class="shop-car-right"></i>
+				</div>
+				<div class="menu">
+					<i class="shop-car-menu-img"></i> 您的购物车已经饿扁了，快去逛逛吧
+				</div>
+			</div>
+		</div>
+		<!--导航模块-->
+		<div id="index-nav">
+			<div class="nav-box">
+				<!--顶部导航-->
+				<ul class="index-first-nav">
+					<li class="nav-title-one">
+						<a href="#">全部类目</a>
+						<!--二级导航-->
+						<ul class="secondlist">
+							<div class="index-nav-secondlist">
+								<li class="secondlist-one">
+									<i>
+										  		  <img src="img/front/purchase.png"/>
+										  		</i>
+									<a href="#">全球购</a>
+									<b></b>
+									<!--三级导航-->
+									<ul class="threenav">
+										<li>
+											<h2>
+										  					<a href="#">美容护肤</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 美妆护肤
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">家居日用</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 家居用品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">个护健康</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 个护健康
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">保健品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 保健品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">母婴用品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 奶粉
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">钟表首饰</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 钟表
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="secondlist-two">
+									<i>
+										  		  <img src="img/front/delicacy.png"/>
+										  		</i>
+									<a href="#">美食酒饮</a>
+									<b></b>
+									<!--三级导航-->
+									<ul class="threenav">
+										<li>
+											<h2>
+										  					<a href="#">食品饮料</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 进口食品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">生鲜</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 海鲜水产
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">中外名酒</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 白酒
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">保健食品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 营养品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">卫生保健</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 成人用品
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="secondlist-three">
+									<i>
+										  		  <img src="img/front/beauty.png"/>
+										  		</i>
+									<a href="#">个护美妆</a>
+									<b></b>
+									<!--三级导航-->
+									<ul class="threenav">
+										<li>
+											<h2>
+										  					<a href="#">美容护肤</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 美妆护肤
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">家居日用</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 家居用品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">个护健康</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 个护健康
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">保健品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 保健品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">母婴用品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 奶粉
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">钟表首饰</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 钟表
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="secondlist-four">
+									<i>
+										  		  <img src="img/front/kitchen.png"/>
+										  		</i>
+									<a href="#">居家生活</a>
+									<b></b>
+									<!--三级导航-->
+									<ul class="threenav">
+										<li>
+											<h2>
+										  					<a href="#">美容护肤</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 美妆护肤
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">家居日用</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 家居用品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">个护健康</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 个护健康
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">保健品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 保健品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">母婴用品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 奶粉
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">钟表首饰</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 钟表
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="secondlist-five">
+									<i>
+										  		  <img src="img/front/textiles.png"/>
+										  		</i>
+									<a href="#">服饰家纺</a>
+									<b></b>
+									<!--三级导航-->
+									<ul class="threenav">
+										<li>
+											<h2>
+										  					<a href="#">美容护肤</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 美妆护肤
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">家居日用</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 家居用品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">个护健康</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 个护健康
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">保健品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 保健品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">母婴用品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 奶粉
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">钟表首饰</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 钟表
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="secondlist-six">
+									<i>
+										  		  <img src="img/front/digital.png"/>
+										  		</i>
+									<a href="#">数码家电</a>
+									<b></b>
+									<!--三级导航-->
+									<ul class="threenav">
+										<li>
+											<h2>
+										  					<a href="#">美容护肤</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 美妆护肤
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">家居日用</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 家居用品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">个护健康</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 个护健康
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">保健品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 保健品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">母婴用品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 奶粉
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">钟表首饰</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 钟表
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="secondlist-sevent">
+									<i>
+										  		  <img src="img/front/jewelry.png"/>
+										  		</i>
+									<a href="#">黄金珠宝</a>
+									<b></b>
+									<!--三级导航-->
+									<ul class="threenav">
+										<li>
+											<h2>
+										  					<a href="#">美容护肤</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 美妆护肤
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">家居日用</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 家居用品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">个护健康</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 个护健康
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">保健品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 保健品
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">母婴用品</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 奶粉
+												</a>
+											</div>
+										</li>
+										<li>
+											<h2>
+										  					<a href="#">钟表首饰</a>
+										  				</h2>
+											<div class="threenav-subox">
+												<a href="#">
+													<span></span> 钟表
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</div>
+						</ul>
+
+					</li>
+
+					<li>
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<a href="#">直播</a>
+					</li>
+					<li>
+						<a href="#">全球购</a>
+					</li>
+					<li>
+						<a href="#">品牌馆</a>
+					</li>
+					<li>
+						<a href="#">特惠活动</a>
+					</li>
+					<li>
+						<a href="#">抢红包</a>
+						<i class="nav-title-hot">
+										<img src="img/hot.png"/>
+									</i>
+					</li>
+
+				</ul>
+			</div>
+
+		</div>
+		<!--头部结束-->
+		<!--商品列表-->
+		<div class="goods-content">
+			<!--顶部路径导航-->
+			<div class="path">
+				<ol class="path-nav">
+					<li>
+						<a href="#">首页</a>
+					</li>
+					<li>&gt;</li>
+					<li>数码家电</li>
+				</ol>
+			</div>
+
+			<!--新品推荐模块-->
+			<div class="new-product">
+				<div class="new-product-left">
+					新品推荐
+				</div>
+				<div class="new-product-list">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/newproduct/good1.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/newproduct/good2.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/newproduct/good3.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/newproduct/good4.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/newproduct/good5.jpg" />
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/newproduct/good6.jpg" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--类目筛选-->
+			<div class="categoryselect">
+				<span>数码家电</span>
+				<span>类目筛选</span> 共
+				<strong class="amount-inner">482</strong> 件商品
+			</div>
+			<!--分类-->
+			<div class="goodclassify">
+				<div class="goodclassifyleft">类目：</div>
+				<div class="claaaifylist">
+					<ul>
+						<li>
+							<a href="#">智能设备</a>
+						</li>
+						<li>
+							<a href="#">手机通讯</a>
+						</li>
+						<li>
+							<a href="#">耳机</a>
+						</li>
+						<li>
+							<a href="#">充电器</a>
+						</li>
+						<li>
+							<a href="#">影音娱乐</a>
+						</li>
+						<li>
+							<a href="#">外设产品</a>
+						</li>
+						<li>
+							<a href="#">网络产品</a>
+						</li>
+						<li>
+							<a href="#">电脑整机</a>
+						</li>
+						<li>
+							<a href="#">大家电</a>
+						</li>
+						<li>
+							<a href="#">其他配件</a>
+						</li>
+						<li>
+							<a href="#">数码配件</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--品牌-->
+			<div class="brand">
+				<div class="brandleft">品牌：</div>
+				<div class="brandlist">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/brand/1.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/2.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/3.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/4.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/5.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/6.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/7.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/8.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/9.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/10.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/11.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/12.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/13.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/14.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/15.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/16.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/17.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/18.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/19.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/20.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/21.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/22.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/23.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/24.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/25.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/26.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/27.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/28.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/29.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/30.jpg" />
+							</a>
+						</li>
+						
+						<li>
+							<a href="#">
+								<img src="img/brand/31.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/32.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/33.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/34.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/35.jpg" />
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<img src="img/brand/36.png" />
+							</a>
+						</li>
+						
+						<li>
+							<a href="#">
+								<img src="img/brand/37.jpeg" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="unfold">
+					<span class="unfoldbtn">
+	           	  	 	 更多
+	           	  	    <i class="xiala"></i>
+           	  	    </span>
+
+				</div>
+			</div>
+
+			<!--商品列表-->
+			<div class="shop-content">
+				<!--最新上架部分-->
+				<div class="new-shop">
+					<div class="new-shop-main">
+						<div class="top">最新上架</div>
+						<ul class="list">
+							<li>
+								<div class="newgoodimg">
+									<a href="#">
+										<img src="img/goods/newgood1.jpg" />
+									</a>
+								</div>
+								<div class="newgoodprice">
+									￥4,999.00
+								</div>
+								<div class="newgoodtitle">
+									<a href="#">达米尼652维多利亚至尊款冰箱</a>
+								</div>
+							</li>
+							<li>
+								<div class="newgoodimg">
+									<a href="#">
+										<img src="img/goods/newgood2.jpg" />
+									</a>
+								</div>
+								<div class="newgoodprice">
+									￥1,09.00
+								</div>
+								<div class="newgoodtitle">
+									<a href="#">英第爱纳女士圆领套装54134</a>
+								</div>
+							</li>
+							<li>
+								<div class="newgoodimg">
+									<a href="#">
+										<img src="img/goods/newgood3.jpg" />
+									</a>
+								</div>
+								<div class="newgoodprice">
+									￥1,29.00
+								</div>
+								<div class="newgoodtitle">
+									<a href="#">英第爱纳男士V领套装53109</a>
+								</div>
+							</li>
+							<li>
+								<div class="newgoodimg">
+									<a href="#">
+										<img src="img/goods/newgood4.jpg" />
+									</a>
+								</div>
+								<div class="newgoodprice">
+									￥1,29.00
+								</div>
+								<div class="newgoodtitle">
+									<a href="#">英第爱纳女士圆领短袖裙54153</a>
+								</div>
+							</li>
+							<li>
+								<div class="newgoodimg">
+									<a href="#">
+										<img src="img/goods/newgood5.jpg" />
+									</a>
+								</div>
+								<div class="newgoodprice">
+									￥1,99.00
+								</div>
+								<div class="newgoodtitle">
+									<a href="#">大兴安岭野生蓝莓果酱苏独享</a>
+								</div>
+							</li>
+							<li>
+								<div class="newgoodimg">
+									<a href="#">
+										<img src="img/goods/newgood6.jpg" />
+									</a>
+								</div>
+								<div class="newgoodprice">
+									￥1,99.00
+								</div>
+								<div class="newgoodtitle">
+									<a href="#">雷瓦震动粉扑粉底电动均匀打粉器振动化妆工具脸部按摩美容</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="newshop-list">
+					<div class="list-tab">
+						<ul>
+							<li>
+								综合排序
+							</li>
+							<li>
+								销量
+							</li>
+							<li>
+								价格<i class="price"></i>
+							</li>
+							<li>
+								新品
+							</li>
+						</ul>
+					</div>
+					<div class="list-box">
+						<div class="list-content">
+							<ul class="list-content-ul">
+								<li>
+									<div class="listgoodimg">
+										<a href="detailsindex.html" target="_blank">
+											<img src="img/listgood/1.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>1199.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="detailsindex2.html" target="_blank">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>2598.00</i>						
+									</div>
+									<div class="listoodtitle">
+										<a href="#">TCL49英寸4K智能液晶(黄金价)</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="detailsindex3.html" target="_blank">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>1989.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">Sacon帅康消毒柜K3</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="detailsindex4.html" target="_blank">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>13888.00</i>
+									
+									</div>
+									<div class="listoodtitle">
+										<a href="#">苹果Apple MacBook Pro 13.3英寸笔记本电脑 银色 MLVP2CH/A</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/5.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>1098.00</i>
+									
+									</div>
+									<div class="listoodtitle">
+										<a href="#">万家乐油烟机 CXW-200-A331.侧吸式 黑金刚 美观</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/6.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">万家乐燃气热水器JSQ16-8L2（天然气）8升</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/7.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>299.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">金士顿（Kingston）HyperX Cloud Stinger 专业电竞耳机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/8.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>998.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">万家乐燃气热水器JSQ24-12JP（天然气）12升</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/9.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>499.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">捷渡D600S行车记录仪</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/10.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>4988.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">三星 Galaxy S6 Edge+（G9280）32G版 全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/11.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>11488.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">苹果Apple MacBook Pro 13.3英寸笔记本电脑 银色 MLUQ2CH/A</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/12.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">万家乐燃气热水器JSQ16-8L2（液化气）8升</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/13.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>1598.00</i>
+										
+									</div>
+									<div class="listoodtitle">
+										<a href="#">万家乐燃气热水器JSQ26-13W5（天然气）13升</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/1.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/1.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/1.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/1.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/1.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/1.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/2.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li>
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/3.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+								<li class="last">
+									<div class="listgoodimg">
+										<a href="#">
+											<img src="img/listgood/4.jpg" />
+										</a>
+									</div>
+									<div class="listgoodprice">
+										<span>￥</span>
+										<i>658.00</i>
+									</div>
+									<div class="listoodtitle">
+										<a href="#">华为畅享5S全网通4G手机</a>
+									</div>
+									<i class="tab_icon"></i>
+									<i class="add_car">加入购物车</i>
+								</li>
+
+							</ul>
+							<div class="pagnav">
+								<ul class="pagnavleft">
+									<li style="width: 74px;height: 31px;">
+										<a href="#">&lt;上一页</a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">6</a>
+									</li>
+									<li>
+										<a href="#">7</a>
+									</li>
+									<li>
+										<a href="#">8</a>
+									</li>
+									<li>...</li>
+									<li>
+										<a href="#">13</a>
+									</li>
+									<li style="width: 74px;height: 31px;">
+										<a href="#">下一页&gt;</a>
+									</li>
+								</ul>
+								<div class="pagnavright">
+									<span>共13页</span> 到第
+									<input type="text" /> 页
+									<a href="#">确定</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--爆款推荐-->
+			<div class="hot-box">
+				<div class="hot-title">热销爆款</div>
+				<ul class="hot-list">
+					<li>
+						<div class="hotgoodimg">
+							<a href="#">
+								<img src="img/hotgood/1.jpg" />
+							</a>
+						</div>
+						<div class="hotgoodprice">
+							￥298.00
+						</div>
+						<div class="hotgoodtitle">
+							<a href="#">Fancy Fuel水光面膜真情告别组</a>
+						</div>
+					</li>
+					<li>
+						<div class="hotgoodimg">
+							<a href="#">
+								<img src="img/hotgood/2.jpg" />
+							</a>
+						</div>
+						<div class="hotgoodprice">
+							￥299.00
+						</div>
+						<div class="hotgoodtitle">
+							<a href="#">脐美人苗家验方健康轻松组</a>
+						</div>
+					</li>
+					
+					<li>
+						<div class="hotgoodimg">
+							<a href="#">
+								<img src="img/hotgood/3.jpg" />
+							</a>
+						</div>
+						<div class="hotgoodprice">
+							￥698.00
+						</div>
+						<div class="hotgoodtitle">
+							<a href="#">OGUMA医美级玻尿酸抚纹尊享</a>
+						</div>
+					</li>
+					
+					<li>
+						<div class="hotgoodimg">
+							<a href="#">
+								<img src="img/hotgood/4.jpg" />
+							</a>
+						</div>
+						<div class="hotgoodprice">
+							￥298.00
+						</div>
+						<div class="hotgoodtitle">
+							<a href="#">Barbie蚕丝内里绑带文胸3+2</a>
+						</div>
+					</li>
+					<li>
+						<div class="hotgoodimg">
+							<a href="#">
+								<img src="img/hotgood/5.jpg" />
+							</a>
+						</div>
+						<div class="hotgoodprice">
+							￥78.00
+						</div>
+						<div class="hotgoodtitle">
+							<a href="#">艾多带盖保鲜储物收纳盒6件套</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		    <!--footer底部部分开始-->
+	    <div id="footer">
+	    	<div class="footer-top">
+	    		<ul class="footer-top-list">
+	    			<li>
+	    				<i>
+	    					<img src="img/service_01.png"/>
+	    				</i>
+	    			</li>
+	    			<li>
+	    				<i>
+	    					<img src="img/service_02.png"/>
+	    				</i>
+	    			</li>
+	    			<li>
+	    				<i>
+	    					<img src="img/service_03.png"/>
+	    				</i>
+	    			</li>
+	    			<li>
+	    				<i>
+	    					<img src="img/service_04.png"/>
+	    				</i>
+	    			</li>
+	    			<li>
+	    				<i>
+	    					<img src="img/service_05.png"/>
+	    				</i>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    	<div class="footer-middle">
+	    		<div class="footer-middle-left">
+	    			<span><img src="img/app_code.jpg"/>到客户端领取红包 </span>
+	    			<span class="s-one"><img src="img/wechart_code.jpg"/> 扫一扫关注微信 </span>
+	    		</div>
+	    		<ul class="footer-middle-list">
+	    			<li class="middle-list-title">订购指南</li>
+	    			<li>
+	    				<a href="#">新手帮助</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">注册协议</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">发票说明</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">售后服务</a>
+	    			</li>
+	    			
+	    		</ul>
+	    	    <ul class="footer-middle-list">
+	    			<li class="middle-list-title">支付方式</li>
+	    			<li>
+	    				<a href="#">在线支付</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">货到付款</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">电话支付</a>
+	    			</li>
+	    			
+	    		</ul>
+	    		<ul class="footer-middle-list">
+	    			<li class="middle-list-title">配送服务</li>
+	    			<li>
+	    				<a href="#">自营商品配送</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">品牌商品配送</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">全球购商品配送</a>
+	    			</li>
+	    			
+	    		</ul>
+	    		<ul class="footer-middle-list">
+	    			<li class="middle-list-title">顾客须知</li>
+	    			<li>
+	    				<a href="#">会员权益</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">购物金规则</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">优惠券规则</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">税费规则</a>
+	    			</li>
+	    			
+	    		</ul>
+	    		<ul class="footer-middle-list">
+	    			<li class="middle-list-title">友情链接</li>
+	    			<li>
+	    				<a href="#">江苏电视台</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">荔枝网</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">幸福蓝海</a>
+	    			</li>
+	    			<li>
+	    				<a href="#">海米派</a>
+	    			</li>
+	    			
+	    		</ul>
+
+	    	</div>
+	    	<div class="footer-bottom">
+	    		<div class="bottom-frident-link">
+	    			<a href="#">关于好享购物</a>|
+	    			<a href="#">供应商系统</a>|
+	    			<a href="#">商家入驻</a>|
+	    			<a href="#">联系我们</a>
+	    		</div>
+	    	    <div class="footer-bottom-line"></div>
+	    	    <div class="footer-bottom-logo">
+	    	    	<a href="#">
+	    	    		<img src="img/link_yinlian.gif"/>
+	    	    	</a>
+	    	    	<a href="#">
+	    	    		<img src="img/zhifubao.gif"/>
+	    	    	</a>
+	    	    	<a href="#">
+	    	    		<img src="img/jingwei.gif"/>
+	    	    	</a>
+	    	    	<a href="#">
+	    	    		<img src="img/szfw_cert.gif"/>
+	    	    	</a>
+	    	    	<a href="#">
+	    	    		<img src="img/golden.jpg"/>
+	    	    	</a>
+	    	    </div>
+	    	    <div class="companymessage">
+	    	    	<div class="companylogo">
+	    	    		<img src="img/copyrights.jpg"/>
+	    	    	</div>
+	    	    	<div class="message">
+	    	    		<strong>江苏省广播电视总台（集团）成员企业</strong>
+	    	    		<p> Copyright©2009-2017好享购物Hao24.com版权所有 </p>
+	    	    		<p> 客服热线：400-608-8888 <a href="#"> 苏ICP备08119934号</a></p>
+	    	    		<p>支持方正正版字体</p>
+	    	    	</div>
+	    	    </div>
+	    	    <div class="statelogo">
+	    	    	<a href="#">
+	    	    		<img src="img/ebsIcon.png"/>
+	    	    	</a>
+	    	    </div>
+	    	</div>
+	    </div>
+		</div>
+	</body>
+
+</html>

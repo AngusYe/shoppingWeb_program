@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login&register-style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/register.js"></script>
+    <script>
+
+        $(function () {
+            /*给input输入焦点事件*/
+            var inputfocus = new Register(".main-middle")
+
+            /*给btn注册按钮添加点击事件*/
+            $('.btn').click(function () {
+
+                     /*保存数据到后台*/
+                     $.get('php/register.php',{
+                          username:$('.username').val(),
+                          password:$('.password').val()
+
+                     },function (responText) {
+
+                         if(responText == 'success'){
+                             location.href='http://127.0.0.1/shopping_program/loginindex.html';
+                         }
+
+                     })
+            })
+
+
+        })
+
+    </script>
+</head>
+<body>
+<!--注册登录界面头部-->
+<div class="warp-header">
+    <div class="header">
+        <a href="#">
+            <img src="img/login_logo.jpg" >
+        </a>
+        <div class="header-inner">欢迎注册</div>
+    </div>
+</div>
+    <!--注册界面-->
+<div class="main-middle">
+    <div class="main-content">
+        <div class="main-content-left">
+            <!--账号-->
+            <div class="account sd">
+                <lable>用户名：</lable>
+                <input type="text" name="username" placeholder="请输入用户名" class="username">
+                <i></i>    <!--class="acfinish unacfinish"-->
+            </div>
+            <!--提示-->
+            <div class="account-tip">
+                <i class="tip-img"></i>
+                <span class="actip-inner"></span>
+            </div>
+            <!--密码-->
+            <div class="account-password sd">
+                <lable>密码：</lable>
+                <input type="password" name="password" placeholder="请输入密码" class="password">
+                <i></i>    <!--class="psfinish unpsfinish"-->
+            </div>
+            <!--提示-->
+            <div class="password-tip">
+                <i class="tip-img"></i>
+                <span class="pstip-inner"></span>
+            </div>
+            <!--注册按钮-->
+            <div class="btn-box">
+                <input type="button" value="注册" class="btn">
+            </div>
+        </div>
+
+        <div class="main-content-right">
+            <div class="top">
+                我已注册，现在就去
+                <a href="http://127.0.0.1/shopping_program/loginindex.html">登录</a>
+            </div>
+            <div class="middle">
+                <p>社交账号登录</p>
+                <a href="#">
+                    <img src="img/login-qq.jpg" >
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login&register-style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        $(function () {
+
+               //焦点
+
+               var login = new Login('.banner-box')
+               
+
+        })
+
+
+
+    </script>
+</head>
+<body>
+<!--登录界面头部-->
+<div class="warp-header">
+    <div class="header">
+        <a href="#">
+            <img src="img/login_logo.jpg" >
+        </a>
+        <div class="header-inner">欢迎登录</div>
+    </div>
+</div>
+<!--登录主界面-->
+<div class="banner-box">
+    <div class="banner">
+        <a href="#" class="banner-a"></a>
+        <div class="login-box">
+            <div class="login-top">
+                <h1>好享购物</h1>
+            </div>
+            <div class="login-content">
+                 <div class="login-warning">
+                     <i class="safe-img"></i>
+                     <span>公共场所不建议自动登录，以防账号丢失</span>
+                 </div>
+                <div class="login-user sd">
+                    <i class="user-img"></i>
+                    <input type="text" name="username" class="username" placeholder="请输入用户名">
+                    <a href="#" class="user-clear usclear"></a>
+                </div>
+                <div class="user-tip">
+                    <i class="tip-img usertipimg"></i>
+                    <span class="usertip-inner usertip"></span>
+                </div>
+                <div class="login-password sd">
+                    <i class="user-img"></i>
+                    <input type="password" name="password" class="password" placeholder="请输入登录密码">
+                    <a href="#" class="user-clear psclear"></a>
+                </div>
+                <div class="user-tip">
+                    <i class="tip-img pstipimg"></i>
+                    <span class="usertip-inner pstip"></span>
+                </div>
+                <div class="login-bottom">
+                    <span class="auto-left">
+                        <input id="autologin" name="autologin" type="checkbox" checked="checked"></input>
+                    </span>
+                    <label for="autologin">自动登录</label>
+                    <span class="auto-right">
+                        <a href="#">忘记密码？</a> |
+                        <a href="registerindex.html">新会员，免费注册</a>
+                    </span>
+                </div>
+                <!--登录按钮-->
+                <div class="btn-box">
+                    <input type="button" value="登录" class="btn">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4e69d67e-f429-4654-9828-ae634d1df397" name="warp" url="http://localhost/shopping_program">
+        <fileTransfer port="0" mountedRoot="C:\wamp\www\shopping_program" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

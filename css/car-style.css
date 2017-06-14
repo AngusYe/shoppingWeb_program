@@ -1,0 +1,291 @@
+.head-inside{
+	
+	width: 100%;
+	height: 80px;
+	background: #ff5e24;
+}
+.head-inside .inside-content{
+	width: 1190px;
+	margin: 0 auto;
+	height: auto;
+}
+.head-inside .inside-content a{
+	width: 160px;
+	height: 59px;
+	float: left;
+	margin-top: 10px;
+}
+.head-inside .inside-content a img{
+	vertical-align: middle;
+}
+.head-inside .inside-content h1{
+	font-size: 30px;
+	height: 40px;
+	float: left;
+	width: 175px;
+	color: #fff;
+	margin: 24px 0 0 38px;
+	box-sizing: border-box;
+	font-weight: normal;
+	
+}
+
+/*购物车主界面*/
+.content-box{
+	width: 1190px;
+	margin: 0 auto;
+	height: auto;
+}
+.content-box .car-ad{
+	width: 100%;
+	height: 23px;
+	margin: 22px 0 10px 0;
+}
+.content-box .shop-car{
+	width: 100%;
+	margin: 0 auto 35px auto;
+	font-size: 14px;
+	clear: both;
+}
+.content-box .shop-car .car-title{
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	font-size: 18px;
+	background: #ff5e24;
+	color: #fff;
+	text-indent: 35px;
+}
+.content-box .shop-car .shop-car-th{
+	
+	width: 100%;
+	height: 48px;
+	padding-top: 20px;
+	
+}
+.content-box .shop-car .shop-car-th li{
+	float: left;
+}
+.content-box .shop-car  .car-li1{
+	width: 62px;
+	height: 40px;
+}
+.content-box .shop-car  .car-li1 .checkbutton{
+	width: 13px;
+	height: 13px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	background: url(../img/car/check.png) no-repeat -15px 0;
+	margin: 4px 0 0 35px;
+	box-sizing: border-box;
+}
+
+.content-box .shop-car  .car-li1 .check{
+	margin: 22px 0 0 35px;
+}
+
+.content-box .shop-car  .car-li1 .checkbutton input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	margin: 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.content-box .shop-car  .car-li2{
+	width: 95px;
+	position: relative;
+}
+.content-box .shop-car  .car-li2  a img{
+	width: 62px;
+	height: 62px;
+	border: 1px solid #e4e4e4;
+}
+.content-box .shop-car  .car-li3{
+	width: 380px;
+	
+}
+.content-box .shop-car  .car-li3 p{
+	line-height: 20px;
+	margin-bottom: 8px;
+	width: 326px;
+	color: #787878;
+}
+.content-box .shop-car  .car-li3 .li3-title{
+	height: 40px;
+	overflow: hidden;
+	display: -webkit-box;
+	
+	
+}
+.content-box .shop-car  .car-li4{
+	width: 215px;
+	
+}
+.content-box .shop-car  .car-li5{
+	width: 156px;
+	
+	
+}
+.content-box .shop-car  .car-li5 .num{
+	width: 106px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #e4e4e4;
+	text-align: center;
+	box-sizing: border-box;
+}
+.content-box .shop-car  .car-li5 .num .num-btn{
+	display: block;
+	width: 33px;
+	height: 35px;
+	float: left;
+	background: #eee;
+	box-sizing: border-box;
+}
+.content-box .shop-car  .car-li5 .num font{
+	width: 38px;
+	height: 35px;
+	display: block;
+	float: left;
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	box-sizing: border-box;
+	background: #fff;
+	
+}
+.content-box .shop-car  .car-li6{
+	width: 116px;
+	
+}
+.content-box .shop-car  .car-li7{
+	text-indent: 45px;
+	
+}
+.content-box .shop-car  .car-li7 a{
+	display: block;
+	cursor: pointer;
+}
+.content-box .shop-car  .car-li7 a:hover{
+	color: #fa7117;
+}
+.content-box .shop-car  .car-li7 .move{
+	margin-top: 23px;
+}
+
+/*购物车每个商品的样式*/
+.content-box .shop-car-td{
+	width: 100%;
+	height: 96px;
+	background: rgb(255, 245, 242);
+	padding-top: 20px;
+	margin-top: 20px;
+}
+.content-box .shop-car-td li{
+	float: left;
+}
+
+
+/*空购物车的样式开始*/
+
+.content-box .car-empty{
+	width: 400px;
+	margin: 120px auto;
+	overflow: hidden;
+	display: none;
+}
+.content-box .car-empty img{
+	width: 77px;
+	height: 67px;
+	float: left;
+}
+.content-box .car-empty p{
+	width: 310px;
+	margin: 10px 0 0 10px;
+	font-size: 18px;
+	float: left;
+}
+.content-box .car-empty p a{
+	color: #fa7117;
+	text-decoration: underline;
+}
+/*空购物车的样式结束*/
+.content-box .pay-box{
+	margin-top: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+.content-box .pay-box .pay-list{
+	clear: both;
+	float: left;
+	width: 942px;
+	height: 50px;
+	border: 1px solid #e4e4e4;
+}
+.content-box .pay-box .pay-list li{
+	float: left;
+	margin: 15px 25px 0 0;
+}
+.content-box .pay-box .pay-list li font{
+	color: #fa7117;
+	margin: 0 4px;
+}
+.content-box .pay-box .pay-list li h3{
+	font-size: 18px;
+	line-height: 16px;
+	float: right;
+	font-weight: normal;
+}
+.content-box .pay-box .pay-list li h3 span{
+	
+	color: #ff5e24;
+	font-size: 24px;
+	margin-left: 5px;
+	
+	
+}
+.content-box .pay-box .pay-list li:last-child{
+	width: 410px;
+}
+.content-box .pay-box .pay-list li .checkbutton{
+	width: 13px;
+	height: 13px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	background: url(../img/car/check.png) no-repeat -15px 0;
+	margin: 4px 0 0 35px;
+	box-sizing: border-box;
+}
+
+
+
+.content-box .pay-box .pay-list li .checkbutton input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	margin: 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.content-box .pay-box .paybtn{
+	display: inline-block;
+	padding: 8px 52px;
+	font-size: 24px;
+	color: #fff;
+	background: #fa7117;
+	border: 0;
+	text-align: center;
+	float: right;
+	box-sizing: border-box;
+	vertical-align: middle;
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 10px;
+	
+}
